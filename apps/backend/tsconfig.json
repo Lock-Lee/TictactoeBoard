@@ -1,0 +1,12 @@
+{
+  "extends": "@repo/tsconfig/elysia.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@repo/shared-types": ["../../packages/shared-types/src"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

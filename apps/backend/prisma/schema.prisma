@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/libs/prisma/generated"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ==========================================
+// Game Player (OAuth Users)
+// ==========================================
+
+model GamePlayer {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  name        String?
+  image       String?
+  provider    String // e.g., "google"
+  providerId  String // OAuth provider user ID
+  score       Int      @default(0)
+  winStreak   Int      @default(0)
+  totalGames  Int      @default(0)
+  totalWins   Int      @default(0)
+  totalLosses Int      @default(0)
+  totalDraws  Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  games Game[]
+
+  @@unique([provider, providerId])
+  @@index([score])
+  @@map("game_players")
+}
+
+// ==========================================
+// Game Records
+// ==========================================
+
+model Game {
+  id        String      @id @default(cuid())
+  playerId  String
+  player    GamePlayer  @relation(fields: [playerId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  result    GAME_RESULT
+  moves     Json // Array of moves: [{position: number, player: 'X' | 'O'}]
+  createdAt DateTime    @default(now())
+
+  @@index([playerId])
+  @@index([result])
+  @@index([createdAt])
+  @@map("games")
+}
+
+// ==========================================
+// Enums
+// ==========================================
+
+enum GAME_RESULT {
+  WIN
+  LOSS
+  DRAW
+}

@@ -1,0 +1,15 @@
+[install]
+# Bun install configuration
+registry = "https://registry.npmjs.org"
+cache = true
+
+[install.scopes]
+# Configure scoped packages if needed
+
+[test]
+# Test configuration
+preload = []
+
+[run]
+# Bun run configuration
+silent = false

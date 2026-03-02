@@ -1,0 +1,63 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Turbo
+.turbo
+
+# Build outputs
+dist
+build
+.next
+out
+
+# Environment files
+.env
+.env*.local
+.env.production
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+*.pem
+Thumbs.db
+
+# Testing
+coverage
+.nyc_output
+
+# IDEs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+*~
+
+# Prisma
+prisma/*.db
+prisma/*.db-journal
+
+# Temp files
+*.tsbuildinfo
+.cache
+temp
+tmp
+
+*storybook.log
+storybook-static
+test-results
+playwright-report
+.auth

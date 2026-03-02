@@ -1,0 +1,56 @@
+{
+  "navigation": {
+    "home": "Home",
+    "game": "Play Game",
+    "leaderboard": "Leaderboard",
+    "logout": "Logout"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Go Back",
+    "home": "Home",
+    "signIn": "Sign In",
+    "playAgain": "Play Again"
+  },
+  "status": {
+    "win": "Win",
+    "loss": "Loss",
+    "draw": "Draw"
+  },
+  "errors": {
+    "notFound": "Page Not Found",
+    "notFoundDescription": "The page you are looking for might have been removed, renamed, or doesn't exist.",
+    "loadError": "Failed to load data"
+  },
+  "game": {
+    "title": "Tic-Tac-Toe",
+    "yourTurn": "Your Turn (X)",
+    "botTurn": "Bot's Turn (O)",
+    "youWin": "You Win! 🎉",
+    "youLose": "You Lost!",
+    "draw": "It's a Draw!",
+    "score": "Score",
+    "streak": "Win Streak",
+    "bonus": "Streak Bonus! +1"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "rank": "Rank",
+    "player": "Player",
+    "score": "Score",
+    "games": "Games",
+    "wins": "Wins",
+    "losses": "Losses",
+    "draws": "Draws",
+    "winStreak": "Win Streak",
+    "noData": "No players yet",
+    "you": "You"
+  },
+  "landing": {
+    "heroTitle": "Tic-Tac-Toe\nChallenge",
+    "heroSubtitle": "Play against an AI bot, build your win streak,\nand climb the leaderboard!",
+    "ctaTitle": "Ready to play?",
+    "ctaSubtitle": "Sign in with Google to start playing"
+  }
+}

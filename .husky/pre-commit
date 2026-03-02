@@ -1,0 +1,8 @@
+# Run Biome check (linting + formatting)
+biome check --write --staged .
+
+# Run type checking
+bun run type-check
+
+# Run tests
+# bun run test
